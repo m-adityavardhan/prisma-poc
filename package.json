@@ -15,6 +15,9 @@
   "bugs": {
     "url": "https://github.com/m-adityavardhan/prisma-poc/issues"
   },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  },
   "homepage": "https://github.com/m-adityavardhan/prisma-poc#readme",
   "description": "",
   "dependencies": {
