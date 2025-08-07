@@ -1,0 +1,28 @@
+{
+  "name": "prisma-poc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-adityavardhan/prisma-poc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m-adityavardhan/prisma-poc/issues"
+  },
+  "homepage": "https://github.com/m-adityavardhan/prisma-poc#readme",
+  "description": "",
+  "dependencies": {
+    "@prisma/client": "^6.13.0",
+    "@types/node": "^24.2.0",
+    "nodemon": "^3.1.10",
+    "prisma": "^6.13.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}
