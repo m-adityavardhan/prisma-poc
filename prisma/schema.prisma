@@ -20,7 +20,6 @@ model User {
   name        String
   email       String       @unique
   createdAt   DateTime     @default(now())
-  isAdmin     Boolean
   posts       Post[]       @relation("AuthorPosts")
   favPosts    Post[]       @relation("FavoritedPosts")
   preferences Preferences?
