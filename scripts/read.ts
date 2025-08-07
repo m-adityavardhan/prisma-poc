@@ -40,6 +40,40 @@ async function main() {
         take: 3
     })
     console.log(" filtering:", allNameuser);
+
+    // example of using conditions like lt,gt, and, or
+     const conditions = await prisma.user.findMany({
+        where: {
+            preferences:{
+                is: {
+                    theme: "dark"
+                }
+            },
+            AND: [
+                {
+                    age: {
+                        gt: 1,
+                        lt: 30,
+                        not: 25
+                    }
+                },
+                {
+                    OR: [
+                        { name: { contains: "e" } },
+                        { name: { startsWith: "J" } }
+                    ]
+                }
+            ]
+        },
+        include: { 
+            preferences: true,
+            posts: true
+        },
+        
+    })
+    console.log(" conditions:", conditions);
+
+
 }
 
 main().catch((e) => { console.error(e); })
