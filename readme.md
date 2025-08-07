@@ -28,14 +28,14 @@ npx ts-node index.ts
 
 ## 🛠️ Project Setup
 
-### 1. Install Dependencies
+**1. Install Dependencies**
 
 ```bash
 npm install prisma typescript ts-node @types/node nodemon --save-dev
 npm install @prisma/client
 ```
 
-#### 🔹 Why each package?
+**🔹 Why each package?**
 
 * **prisma** – Prisma CLI used for managing schema, migrations, and database syncing.
 * **typescript** – Enables you to write code in TypeScript.
@@ -128,7 +128,7 @@ npx prisma migrate dev --name your_migration_name
 
 Prisma Migrate is a tool to track and apply schema changes to your database over time using version-controlled migration files.
 
-#### 💡 Common Commands
+**💡 Common Commands**
 
 | Command          | Purpose                                                                  |
 | ---------------- | ------------------------------------------------------------------------ |
