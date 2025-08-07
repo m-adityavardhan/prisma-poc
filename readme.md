@@ -192,12 +192,12 @@ Here’s a breakdown of each relationship type and how it works under the hood.
 
 ### 🔸 1. One-to-One Relationship (`1:1`)
 
-#### 🔍 Concept
+ **🔍 Concept**
 
 * One record in **Model A** is linked to exactly one record in **Model B**
 * Represented by a **foreign key** with a `@unique` constraint to ensure exclusivity
 
-#### 🧱 Prisma Schema
+**🧱 Prisma Schema**
 
 ```prisma
 model User {
@@ -215,7 +215,7 @@ model Profile {
 }
 ```
 
-#### 🧠 How It Works
+ **🧠 How It Works**
 
 * The `Profile` model has a **foreign key field** `userId` pointing to `User.id`
 * The `@relation` directive defines which fields link the two models
@@ -225,12 +225,12 @@ model Profile {
 
 ### 🔸 2. One-to-Many Relationship (`1:N`)
 
-#### 🔍 Concept
+**🔍 Concept**
 
 * One record in **Model A** can be related to **multiple** records in **Model B**
 * The **“many” side** holds the foreign key
 
-#### 🧱 Prisma Schema
+** 🧱 Prisma Schema**
 
 ```prisma
 model User {
@@ -248,7 +248,7 @@ model Post {
 }
 ```
 
-#### 🧠 How It Works
+**🧠 How It Works**
 
 * The `Post` model has a `userId` field that stores the foreign key
 * The `@relation` attribute connects `Post.userId` to `User.id`
@@ -259,12 +259,12 @@ model Post {
 
 ### 🔸 3. Many-to-Many Relationship (`M:N`)
 
-#### 🔍 Concept
+**🔍 Concept**
 
 * Records in both models can have **multiple** associations with each other
 * Prisma supports this automatically using an **implicit join table**
 
-#### 🧱 Prisma Schema
+**🧱 Prisma Schema**
 
 ```prisma
 model Student {
@@ -280,7 +280,7 @@ model Course {
 }
 ```
 
-#### 🧠 How It Works
+**🧠 How It Works**
 
 * Both models use array fields to define the many-to-many relationship
 * The `@relation("Enrollments")` ensures both sides reference the same join
