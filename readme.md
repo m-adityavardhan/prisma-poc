@@ -58,7 +58,7 @@ npx tsc --init
 
 Then edit to include the following common settings:
 
-```json
+```js
 {
   "compilerOptions": {
     "target": "ES2020",            // Latest JS features
